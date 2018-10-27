@@ -70,8 +70,8 @@ var lightAmbient = vec4(0.6, 0.6, 0.6, 1.0 );
 var lightDiffuse = vec4( 1.0, 1.0, 1.0, 1.0 );
 var lightSpecular = vec4( 1.0, 1.0, 1.0, 1.0 );
 
-var materialAmbient = vec4( 0.0, 0.5, 1.0, 1.0 );
-var materialDiffuse = vec4( 1.0, 0.8, 1.0, 1.0);
+var materialAmbient = vec4( 1.0, 1.0, 1.0, 1.0 );
+var materialDiffuse = vec4( 1.0, 1.0, 1.0, 1.0);
 var materialSpecular = vec4( 1.0, 0.8, 1.0, 1.0 );
 var materialShininess = 100.0;
 
@@ -92,7 +92,7 @@ var thetaLoc;
 var flag = true;
 
 function configureTexture( image ) {
-    image.crossOrigin = "anonymous";
+    // image.crossOrigin = "anonymous";
 
     texture = gl.createTexture();
     gl.bindTexture( gl.TEXTURE_2D, texture );
@@ -105,7 +105,7 @@ function configureTexture( image ) {
 
     gl.uniform1i(gl.getUniformLocation(program, "texture"), 0);
 
-    image.src = "wood.gif";
+    // image.src = "wood.gif";
 }
 
 function quad(a, b, c, d) {
